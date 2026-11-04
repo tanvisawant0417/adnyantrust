@@ -9,33 +9,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (pageLoader) {
     setTimeout(function () {
-
-      pageLoader.classList.add("loaded");
+      document.body.classList.add("loaded");
+      pageLoader.classList.add("hide");
 
       setTimeout(function () {
         pageLoader.style.display = "none";
-      }, 500);
+      }, 900);
 
     }, 1600);
   }
 
 
   /* =====================================================
-     MOBILE NAVIGATION
+     RESPONSIVE MOBILE NAVIGATION
   ===================================================== */
 
   const menuToggle = document.getElementById("menuToggle");
   const navbar = document.getElementById("navbar");
 
+  function closeMenu() {
+    if (!menuToggle || !navbar) return;
+
+    navbar.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }
+
   if (menuToggle && navbar) {
 
     menuToggle.addEventListener("click", function () {
 
-      navbar.classList.toggle("active");
+      const isOpen = navbar.classList.toggle("active");
 
-      const isOpen = navbar.classList.contains("active");
-
-      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
 
       menuToggle.innerHTML = isOpen
         ? '<i class="fa-solid fa-xmark"></i>'
@@ -44,17 +55,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     navbar.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
 
-      link.addEventListener("click", function () {
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
 
-        navbar.classList.remove("active");
-
-        menuToggle.setAttribute("aria-expanded", "false");
-
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-
-      });
-
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 650) {
+        closeMenu();
+      }
     });
 
   }
@@ -65,15 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
   ===================================================== */
 
   const filterButtons = document.querySelectorAll(".filter-btn");
-
-  const photoCards = document.querySelectorAll(
-    ".initiative-photo-card"
-  );
-
+  const photoCards = document.querySelectorAll(".initiative-photo-card");
   const galleryCount = document.getElementById("galleryCount");
-
   const galleryEmpty = document.getElementById("galleryEmpty");
-
 
   function filterGallery(category) {
 
@@ -94,30 +101,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
     filterButtons.forEach(function (button) {
 
       const isActive = button.dataset.filter === category;
 
       button.classList.toggle("active", isActive);
-
-      button.setAttribute("aria-pressed", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
 
     });
 
-
     if (galleryCount) {
       galleryCount.textContent =
-        "Showing " + visibleCount + " photographs";
+        "Showing " + visibleCount +
+        (visibleCount === 1 ? " photograph" : " photographs");
     }
-
 
     if (galleryEmpty) {
       galleryEmpty.hidden = visibleCount !== 0;
     }
 
   }
-
 
   filterButtons.forEach(function (button) {
 
@@ -127,9 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-
   /* DEFAULT CATEGORY */
-
   filterGallery("education");
 
 
@@ -141,13 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ".initiative-photo-wrap img"
   );
 
-
   galleryImages.forEach(function (img) {
 
     const fallback = img.parentElement.querySelector(
       ".initiative-photo-fallback"
     );
-
 
     function showFallback() {
 
@@ -159,11 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
-    img.addEventListener("error", showFallback);
-
-
-    img.addEventListener("load", function () {
+    function showImage() {
 
       img.style.display = "block";
 
@@ -171,17 +166,17 @@ document.addEventListener("DOMContentLoaded", function () {
         fallback.hidden = true;
       }
 
-    });
+    }
 
+    img.addEventListener("error", showFallback);
+    img.addEventListener("load", showImage);
 
-    if (img.complete && img.naturalWidth === 0) {
+    if (img.complete) {
 
-      showFallback();
-
-    } else if (img.complete && img.naturalWidth > 0) {
-
-      if (fallback) {
-        fallback.hidden = true;
+      if (img.naturalWidth === 0) {
+        showFallback();
+      } else {
+        showImage();
       }
 
     }
@@ -191,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* =====================================================
      YOUTUBE VIDEO
-     No autoplay: visitors can press Play themselves.
   ===================================================== */
 
   const youtubeVideo = document.getElementById(
@@ -201,11 +195,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (youtubeVideo) {
 
     youtubeVideo.addEventListener("error", function () {
-
       console.log(
         "YouTube video could not be loaded. Check the video embedding settings."
       );
-
     });
 
   }
@@ -217,59 +209,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let selectedAmount = 500;
 
-
   const amountButtons = document.querySelectorAll(".amount-btn");
 
   const customAmount = document.getElementById("customAmount");
-
   const donationPurpose = document.getElementById("donationPurpose");
 
-
   const summaryAmount = document.getElementById("summaryAmount");
-
   const summaryTotal = document.getElementById("summaryTotal");
-
   const summaryPurpose = document.getElementById("summaryPurpose");
 
-
   const donorName = document.getElementById("donorName");
-
   const donorEmail = document.getElementById("donorEmail");
-
   const donorPhone = document.getElementById("donorPhone");
 
-
   const payNowBtn = document.getElementById("payNowBtn");
-
   const backToDonationBtn = document.getElementById(
     "backToDonationBtn"
   );
 
-
   const paymentStep = document.getElementById("paymentStep");
-
   const paymentAmount = document.getElementById("paymentAmount");
-
   const paymentPurpose = document.getElementById("paymentPurpose");
-
   const paymentDonor = document.getElementById("paymentDonor");
-
 
   const donationFormView = document.getElementById(
     "donationFormView"
   );
 
-  const donationTitle = document.getElementById(
-    "donation-title"
-  );
+  const donationTitle = document.getElementById("donation-title");
 
 
   /* FORMAT AMOUNT */
 
   function formatAmount(amount) {
-
     return "₹" + Number(amount).toLocaleString("en-IN");
-
   }
 
 
@@ -286,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* UPDATE SUMMARY */
+  /* UPDATE DONATION SUMMARY */
 
   function updateDonationSummary() {
 
@@ -298,7 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const purpose = donationPurpose
       ? donationPurpose.value
       : "General Donation";
-
 
     if (summaryAmount) {
       summaryAmount.textContent = formatAmount(validAmount);
@@ -496,7 +468,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
 
-      /* SHOW PAYMENT SCREEN */
+      /* HIDE FORM AND SHOW QR PAYMENT SCREEN */
 
       if (donationFormView) {
         donationFormView.hidden = true;
