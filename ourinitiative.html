@@ -4,23 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="description" content="Explore the real community work and initiatives of ADNYAN Research & Educational Trust.">
-
   <title>Our Initiatives | ADNYAN Research &amp; Educational Trust</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="ourinitiative.css">
-
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-
   <script src="ourinitiative.js" defer></script>
 </head>
 
@@ -29,7 +22,6 @@
 <!-- PAGE LOADER -->
 <div id="page-loader">
   <div class="loader-background"></div>
-
   <div class="loader-content">
     <div class="loader-logo-wrap">
       <div class="loader-glow"></div>
@@ -37,19 +29,14 @@
       <div class="loader-ring ring-two"></div>
       <img src="logo.png" alt="ADNYAN Logo" class="loader-logo">
     </div>
-
     <div class="loader-brand">
       <h1>ADNYAN</h1>
       <p>Research &amp; Educational Trust</p>
     </div>
-
     <div class="loader-progress">
       <div class="loader-progress-bar"></div>
     </div>
-
-    <div class="loader-status" id="loader-text">
-      Preparing something meaningful...
-    </div>
+    <div class="loader-status">Preparing something meaningful...</div>
   </div>
 </div>
 
@@ -57,10 +44,8 @@
 
 <!-- HEADER -->
 <header class="site-header">
-
   <a class="brand" href="index.html" aria-label="ADNYAN home">
     <img src="logo.png" alt="ADNYAN logo">
-
     <span>
       <strong>ADNYAN</strong>
       <small>Research &amp; Educational Trust</small>
@@ -68,8 +53,10 @@
   </a>
 
   <button class="menu-toggle" id="menuToggle"
+          type="button"
           aria-label="Open navigation"
-          aria-expanded="false">
+          aria-expanded="false"
+          aria-controls="navbar">
     <i class="fa-solid fa-bars"></i>
   </button>
 
@@ -82,348 +69,201 @@
       <i class="fa-solid fa-heart"></i> Donate Now
     </a>
   </nav>
-
 </header>
 
 <main>
 
 <!-- HERO -->
-<section class="initiative-hero">
-
+<section class="initiative-hero" aria-labelledby="initiative-page-title">
   <div class="initiative-hero-inner">
-
     <span class="initiative-eyebrow">
       <i class="fa-solid fa-leaf"></i>
       REAL WORK. REAL PEOPLE. REAL IMPACT.
     </span>
-
-    <h1>OUR JOURNEY IN PICTURES</h1>
-
-    <p>
-      A glimpse of the moments, people and community activities
-      that bring our work to life.
-    </p>
-
+    <h1 id="initiative-page-title">OUR JOURNEY IN PICTURES</h1>
+    <p>A glimpse of the moments, people and community activities that bring our work to life.</p>
     <a href="#initiative-gallery" class="initiative-hero-link">
-      Explore Our Work
-      <i class="fa-solid fa-arrow-down"></i>
+      Explore Our Work <i class="fa-solid fa-arrow-down"></i>
     </a>
-
   </div>
-
   <div class="initiative-hero-decoration initiative-decoration-one"></div>
   <div class="initiative-hero-decoration initiative-decoration-two"></div>
-
 </section>
 
-
 <!-- PHOTO GALLERY -->
-<section class="initiative-gallery-section" id="initiative-gallery">
-
+<section class="initiative-gallery-section" id="initiative-gallery" aria-labelledby="gallery-title">
   <div class="initiative-section-heading">
     <span>GLIMPSES OF OUR WORK</span>
-    <h2>Photo Gallery</h2>
-    <p>
-      Explore our initiatives through photographs.
-      Select a category to discover our activities.
-    </p>
+    <h2 id="gallery-title">Photo Gallery</h2>
+    <p>Explore our initiatives through photographs. Select a category to discover our activities.</p>
   </div>
 
-  <!-- FILTER BUTTONS -->
-  <div class="gallery-filter">
-
-    <button type="button" class="filter-btn active"
-            data-filter="education" aria-pressed="true">
-      <i class="fa-solid fa-graduation-cap"></i>
-      Education
+  <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+    <button type="button" class="filter-btn active" data-filter="education" aria-pressed="true">
+      <i class="fa-solid fa-graduation-cap"></i> Education
     </button>
-
-    <button type="button" class="filter-btn"
-            data-filter="social" aria-pressed="false">
-      <i class="fa-solid fa-hand-holding-heart"></i>
-      Social
+    <button type="button" class="filter-btn" data-filter="social" aria-pressed="false">
+      <i class="fa-solid fa-hand-holding-heart"></i> Social
     </button>
-
-    <button type="button" class="filter-btn"
-            data-filter="community" aria-pressed="false">
-      <i class="fa-solid fa-people-group"></i>
-      Community
+    <button type="button" class="filter-btn" data-filter="community" aria-pressed="false">
+      <i class="fa-solid fa-people-group"></i> Community
     </button>
-
-    <button type="button" class="filter-btn"
-            data-filter="all" aria-pressed="false">
-      <i class="fa-solid fa-border-all"></i>
-      All
+    <button type="button" class="filter-btn" data-filter="all" aria-pressed="false">
+      <i class="fa-solid fa-border-all"></i> All
     </button>
-
   </div>
 
   <div class="gallery-results">
     <span id="galleryCount" aria-live="polite">Showing 6 photographs</span>
   </div>
 
-
-  <!-- IMAGE GRID -->
   <div class="initiative-photo-grid" id="initiativePhotoGrid">
 
     <!-- EDUCATION -->
-
     <figure class="initiative-photo-card" data-category="education">
       <div class="initiative-photo-wrap">
         <img src="education1.png" alt="ADNYAN educational activities" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>education-1.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Educational Activities</strong>
-        <small>Learning and development</small>
-      </figcaption>
+      <figcaption><strong>Educational Activities</strong><small>Learning and development</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="education">
       <div class="initiative-photo-wrap">
         <img src="learning.png" alt="Student support activities" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>education-2.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Student Support</strong>
-        <small>Supporting young learners</small>
-      </figcaption>
+      <figcaption><strong>Student Support</strong><small>Supporting young learners</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="education">
       <div class="initiative-photo-wrap">
         <img src="education.png" alt="Educational awareness programme" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>education-3.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Educational Awareness</strong>
-        <small>Knowledge for everyone</small>
-      </figcaption>
+      <figcaption><strong>Educational Awareness</strong><small>Knowledge for everyone</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="education">
       <div class="initiative-photo-wrap">
         <img src="brighter.jpeg" alt="Education programme" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>education-4.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Education Programme</strong>
-        <small>Building a better future</small>
-      </figcaption>
+      <figcaption><strong>Education Programme</strong><small>Building a better future</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="education">
       <div class="initiative-photo-wrap">
         <img src="education2.jpeg" alt="Children learning together" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>education-5.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Learning Together</strong>
-        <small>Encouraging education</small>
-      </figcaption>
+      <figcaption><strong>Learning Together</strong><small>Encouraging education</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="education">
       <div class="initiative-photo-wrap">
         <img src="education3.png" alt="Educational community initiative" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>education-6.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Knowledge Sharing</strong>
-        <small>Education for all</small>
-      </figcaption>
+      <figcaption><strong>Knowledge Sharing</strong><small>Education for all</small></figcaption>
     </figure>
 
-
     <!-- SOCIAL -->
-
     <figure class="initiative-photo-card" data-category="social">
       <div class="initiative-photo-wrap">
         <img src="banner1.jpeg" alt="Social awareness programme" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>social-1.jpeg</small></div>
       </div>
-      <figcaption>
-        <strong>Social Awareness</strong>
-        <small>Creating positive awareness</small>
-      </figcaption>
+      <figcaption><strong>Social Awareness</strong><small>Creating positive awareness</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="social">
       <div class="initiative-photo-wrap">
         <img src="social.jpeg" alt="Social welfare activities" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>social-2.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Social Welfare</strong>
-        <small>Working for society</small>
-      </figcaption>
+      <figcaption><strong>Social Welfare</strong><small>Working for society</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="social">
       <div class="initiative-photo-wrap">
         <img src="social3.jpeg" alt="Women empowerment activity" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>social-3.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Women Empowerment</strong>
-        <small>Supporting equal opportunities</small>
-      </figcaption>
+      <figcaption><strong>Women Empowerment</strong><small>Supporting equal opportunities</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="social">
       <div class="initiative-photo-wrap">
         <img src="social4.jpeg" alt="Social support programme" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>social-4.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Social Support</strong>
-        <small>Helping people in need</small>
-      </figcaption>
+      <figcaption><strong>Social Support</strong><small>Helping people in need</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="social">
       <div class="initiative-photo-wrap">
         <img src="social5.jpeg" alt="Community awareness programme" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>social-5.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Community Awareness</strong>
-        <small>Social responsibility</small>
-      </figcaption>
+      <figcaption><strong>Community Awareness</strong><small>Social responsibility</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="social">
       <div class="initiative-photo-wrap">
         <img src="social6.jpeg" alt="Social development initiative" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>social-6.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Social Development</strong>
-        <small>Making a difference</small>
-      </figcaption>
+      <figcaption><strong>Social Development</strong><small>Making a difference</small></figcaption>
     </figure>
 
-
     <!-- COMMUNITY -->
-
     <figure class="initiative-photo-card" data-category="community">
       <div class="initiative-photo-wrap">
         <img src="foodandcommunity.jpeg" alt="Food distribution by ADNYAN" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>community-1.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Food Distribution</strong>
-        <small>Supporting families</small>
-      </figcaption>
+      <figcaption><strong>Food Distribution</strong><small>Supporting families</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="community">
       <div class="initiative-photo-wrap">
         <img src="awarness.jpeg" alt="Volunteers serving meals" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>community-2.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Serving Meals</strong>
-        <small>A moment of community service</small>
-      </figcaption>
+      <figcaption><strong>Serving Meals</strong><small>A moment of community service</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="community">
       <div class="initiative-photo-wrap">
         <img src="community1.png" alt="Community support activity" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>community-3.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Community Support</strong>
-        <small>Standing together</small>
-      </figcaption>
+      <figcaption><strong>Community Support</strong><small>Standing together</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="community">
       <div class="initiative-photo-wrap">
         <img src="tree.jpeg" alt="Community development activities" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>community-4.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Community Work</strong>
-        <small>Working together for people</small>
-      </figcaption>
+      <figcaption><strong>Community Work</strong><small>Working together for people</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="community">
       <div class="initiative-photo-wrap">
         <img src="community3.png" alt="ADNYAN field activities" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>community-5.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Field Activities</strong>
-        <small>Our work beyond the classroom</small>
-      </figcaption>
+      <figcaption><strong>Field Activities</strong><small>Our work beyond the classroom</small></figcaption>
     </figure>
 
     <figure class="initiative-photo-card" data-category="community">
       <div class="initiative-photo-wrap">
         <img src="community2.jpeg" alt="ADNYAN volunteers during community service" loading="lazy">
-        <div class="initiative-photo-fallback" hidden>
-          <i class="fa-regular fa-image"></i>
-          <span>Image unavailable</span>
-        </div>
+        <div class="initiative-photo-fallback" hidden><i class="fa-regular fa-image"></i><span>Add your photo</span><small>community-6.jpg</small></div>
       </div>
-      <figcaption>
-        <strong>Our Volunteers</strong>
-        <small>Every contribution matters</small>
-      </figcaption>
+      <figcaption><strong>Our Volunteers</strong><small>Every contribution matters</small></figcaption>
     </figure>
 
   </div>
@@ -435,127 +275,84 @@
   </div>
 
   <p class="initiative-gallery-note">
-    <i class="fa-solid fa-heart"></i>
-    Every photograph represents a moment of learning, care and community support.
+    <i class="fa-solid fa-circle-info"></i>
+    Photographs showcase activities and moments from our community initiatives.
   </p>
-
 </section>
 
-
-<!-- VIDEO SECTION -->
-<section class="initiative-video-section">
-
+<!-- YOUTUBE VIDEO -->
+<section class="initiative-video-section" aria-labelledby="initiative-video-title">
   <div class="initiative-video-inner">
-
     <div class="initiative-video-copy">
-
       <span class="initiative-video-kicker">SEE IT FOR YOURSELF</span>
-
-      <h2>Watch Our Work in Action</h2>
-
-      <p>
-        Go beyond photographs and see a real glimpse of ADNYAN's
-        community work through our featured video.
-      </p>
-
+      <h2 id="initiative-video-title">Watch Our Work in Action</h2>
+      <p>Go beyond photographs and see a real glimpse of ADNYAN's community work through our featured video.</p>
       <div class="video-detail">
         <i class="fa-brands fa-youtube"></i>
         <span>Featured ADNYAN video</span>
       </div>
-
     </div>
 
     <div class="initiative-video-card">
-
       <div class="initiative-video-frame">
-
         <iframe
+          id="adnyanYoutubeVideo"
           src="https://www.youtube.com/embed/CXOs_ht5_bk"
           title="ADNYAN Community Work"
-          width="560"
-          height="315"
-          loading="eager"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
-
       </div>
-
       <div class="initiative-video-caption">
-        <span>
-          <i class="fa-solid fa-circle-play"></i>
-          Our story, directly from the field
-        </span>
+        <span><i class="fa-solid fa-circle-play"></i> Our story, directly from the field</span>
         <span>ADNYAN</span>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- SUPPORT SECTION -->
+<!-- VOLUNTEER AND DONATION -->
 <section class="support-section" aria-label="Volunteer and donate">
 
   <div class="volunteer-panel">
-
     <div class="leaf-decoration">
       <i class="fa-solid fa-leaf"></i>
       <i class="fa-solid fa-leaf"></i>
       <i class="fa-solid fa-leaf"></i>
     </div>
-
     <div class="support-heart">
       <i class="fa-solid fa-hand-holding-heart"></i>
     </div>
-
     <h2>Your time, support and contribution can transform lives.</h2>
-
     <div class="support-actions">
-
       <a class="btn btn-orange" href="volunteer.html">
-        <i class="fa-solid fa-users"></i>
-        Become a Volunteer
+        <i class="fa-solid fa-users"></i> Become a Volunteer
       </a>
-
       <a class="btn btn-light-outline" href="#donation-dashboard">
-        <i class="fa-solid fa-heart"></i>
-        Donate Now
+        <i class="fa-solid fa-heart"></i> Donate Now
       </a>
-
     </div>
-
   </div>
-
 
   <!-- DONATION DASHBOARD -->
   <section class="donation-card" id="donation-dashboard">
-
     <div class="donation-heading">
-
       <div>
         <span>SUPPORT ADNYAN</span>
         <h2 id="donation-title">Make a Donation</h2>
         <p>Your contribution helps us create meaningful change.</p>
       </div>
-
       <div class="donation-mark">
         <i class="fa-solid fa-hands-holding-circle"></i>
         <i class="fa-solid fa-heart"></i>
       </div>
-
     </div>
-
 
     <!-- DONATION FORM -->
     <div id="donationFormView">
-
       <div class="donation-field">
         <label>Choose Donation Amount</label>
-
         <div class="amount-options">
           <button type="button" class="amount-btn active" data-amount="500">₹500</button>
           <button type="button" class="amount-btn" data-amount="1000">₹1,000</button>
@@ -567,16 +364,14 @@
 
       <div class="donation-field">
         <label for="customAmount">Or Enter Your Amount</label>
-
         <div class="custom-amount-box">
           <span>₹</span>
-          <input type="number" id="customAmount" min="1" placeholder="Enter amount">
+          <input type="number" id="customAmount" min="1" step="1" placeholder="Enter amount">
         </div>
       </div>
 
       <div class="donation-field">
         <label for="donationPurpose">Donation Purpose</label>
-
         <select id="donationPurpose" class="donation-select">
           <option>General Donation</option>
           <option>Educational Aid</option>
@@ -586,46 +381,28 @@
       </div>
 
       <div class="donor-grid">
-
         <div class="donation-field">
           <label for="donorName">Your Name</label>
-          <input type="text" id="donorName" class="donation-input" placeholder="Enter your name">
+          <input type="text" id="donorName" class="donation-input" placeholder="Enter your name" autocomplete="name">
         </div>
-
         <div class="donation-field">
           <label for="donorEmail">Email Address</label>
-          <input type="email" id="donorEmail" class="donation-input" placeholder="Enter your email">
+          <input type="email" id="donorEmail" class="donation-input" placeholder="Enter your email" autocomplete="email">
         </div>
-
         <div class="donation-field donor-phone">
           <label for="donorPhone">Mobile Number</label>
-          <input type="tel" id="donorPhone" class="donation-input"
-                 maxlength="10" placeholder="10-digit mobile number">
+          <input type="tel" id="donorPhone" class="donation-input" maxlength="10" inputmode="numeric" placeholder="10-digit mobile number" autocomplete="tel">
         </div>
-
       </div>
 
       <div class="donation-summary">
-
-        <div>
-          <span>Donation Amount</span>
-          <strong id="summaryAmount">₹500</strong>
-        </div>
-
-        <div>
-          <span>Purpose</span>
-          <strong id="summaryPurpose">General Donation</strong>
-        </div>
-
-        <div class="summary-total">
-          <span>Total</span>
-          <strong id="summaryTotal">₹500</strong>
-        </div>
-
+        <div><span>Donation Amount</span><strong id="summaryAmount">₹500</strong></div>
+        <div><span>Purpose</span><strong id="summaryPurpose">General Donation</strong></div>
+        <div class="summary-total"><span>Total</span><strong id="summaryTotal">₹500</strong></div>
       </div>
 
       <button type="button" class="continue-btn" id="payNowBtn">
-        <span>Continue to Payment</span>
+        <span>Continue</span>
         <i class="fa-solid fa-arrow-right"></i>
       </button>
 
@@ -633,17 +410,14 @@
         <i class="fa-solid fa-lock"></i>
         Your contribution supports ADNYAN initiatives.
       </p>
-
     </div>
 
-
-    <!-- PAYMENT STEP -->
+    <!-- PAYMENT SCREEN: OUTSIDE THE DONATION FORM -->
     <div class="payment-step" id="paymentStep" hidden>
-
       <div class="payment-step-heading">
         <span class="payment-kicker">COMPLETE YOUR CONTRIBUTION</span>
         <h3>Scan &amp; Pay</h3>
-        <p>Scan this QR code using any supported UPI app.</p>
+        <p>Scan this QR code using a supported UPI app.</p>
       </div>
 
       <div class="payment-amount">
@@ -652,46 +426,32 @@
       </div>
 
       <div class="payment-qr-frame">
-        <img src="qrcode.jpeg"
-             alt="ADNYAN Donation QR Code"
-             id="donationQrImage">
+        <img src="qrcode.jpeg" alt="ADNYAN Donation QR Code" id="donationQrImage">
       </div>
 
-      <p class="payment-purpose">
-        Purpose: <strong id="paymentPurpose">General Donation</strong>
-      </p>
-
-      <p class="payment-donor">
-        Donor: <strong id="paymentDonor">—</strong>
-      </p>
+      <p class="payment-purpose">Purpose: <strong id="paymentPurpose">General Donation</strong></p>
+      <p class="payment-donor">Donor: <strong id="paymentDonor">—</strong></p>
 
       <p class="payment-instruction">
         Scan the QR code and complete your donation using your UPI application.
       </p>
+      <p class="payment-disclaimer">
+        This page does not automatically verify payments. Please confirm payment directly with the trust.
+      </p>
 
-      <button type="button" class="continue-btn back-donation-btn"
-              id="backToDonationBtn">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>Back to Donation Form</span>
+      <button type="button" class="payment-back-btn" id="backToDonationBtn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Donation Form
       </button>
-
     </div>
-
   </section>
-
 </section>
-
 </main>
-
 
 <!-- FOOTER -->
 <footer class="site-footer">
-
   <div class="footer-main">
-
     <a class="footer-brand" href="index.html">
       <img src="logo.png" alt="ADNYAN logo">
-
       <span>
         <strong>ADNYAN</strong>
         <small>Research &amp; Educational Trust</small>
@@ -712,21 +472,17 @@
       <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
       <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
-
   </div>
 
   <div class="footer-bottom">
     <span>© 2026 ADNYAN Research &amp; Educational Trust. All Rights Reserved.</span>
-
     <div>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms &amp; Conditions</a>
     </div>
   </div>
-
 </footer>
 
 </div>
-
 </body>
 </html>
