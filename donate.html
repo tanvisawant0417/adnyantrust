@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support ADNYAN Research & Educational Trust.">
+  <title>Donate Now | ADNYAN Research & Educational Trust</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Existing shared stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Donate page stylesheet -->
+  <link rel="stylesheet" href="donate.css">
+
+  <script src="donate.js" defer></script>
+</head>
+
+<body>
+
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-background"></div>
+
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <div class="loader-glow"></div>
+        <div class="loader-ring ring-one"></div>
+        <div class="loader-ring ring-two"></div>
+        <img src="images/logo.png" alt="ADNYAN Logo" class="loader-logo">
+      </div>
+
+      <div class="loader-brand">
+        <h1>ADNYAN</h1>
+        <p>Research &amp; Educational Trust</p>
+      </div>
+
+      <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+      </div>
+
+      <div class="loader-status">
+        Preparing something meaningful...
+      </div>
+    </div>
+  </div>
+
+
+  <div id="website">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="ADNYAN Logo">
+
+        <span>
+          <strong>ADNYAN</strong>
+          <small>Research &amp; Educational Trust</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="ourinitiative.html">Our Initiatives</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html" class="nav-donate active">
+          <i class="fa-solid fa-heart"></i>
+          Donate Now
+        </a>
+      </nav>
+
+    </header>
+
+
+    <main>
+
+      <!-- NEW DONATE HERO BANNER -->
+      <section class="donate-hero donate-hero-new">
+
+        <div class="donate-hero-pattern"></div>
+
+        <div class="donate-hero-content reveal">
+
+          <span class="donate-eyebrow">
+            <i class="fa-solid fa-heart"></i>
+            BE THE REASON SOMEONE SMILES
+          </span>
+
+          <h1>
+            Give Hope.<br>
+            Create <span>Opportunities.</span>
+          </h1>
+
+          <p>
+            Your generosity can help children learn, explore their
+            creativity and build a brighter future. Every contribution
+            brings us one step closer to meaningful change.
+          </p>
+
+          <a href="#donation-dashboard" class="donate-hero-button">
+            Make a Difference
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="donate-hero-note">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            Every contribution matters.
+          </div>
+
+        </div>
+
+
+        <!-- CSS-BASED ILLUSTRATION -->
+        <div class="donate-artwork reveal">
+
+          <div class="donate-art-circle circle-large"></div>
+          <div class="donate-art-circle circle-small"></div>
+
+          <div class="donate-art-main">
+
+            <div class="donate-art-icon">
+              <i class="fa-solid fa-hands-holding-child"></i>
+            </div>
+
+            <span>YOUR SUPPORT</span>
+
+            <h2>
+              Can Change<br>
+              Tomorrow.
+            </h2>
+
+            <div class="donate-art-divider"></div>
+
+            <p>Education • Creativity • Community</p>
+
+          </div>
+
+
+          <div class="donate-floating-card donate-card-top">
+            <span>
+              <i class="fa-solid fa-book-open"></i>
+            </span>
+
+            <div>
+              <strong>Education</strong>
+              <small>Learning opportunities</small>
+            </div>
+          </div>
+
+
+          <div class="donate-floating-card donate-card-bottom">
+            <span>
+              <i class="fa-solid fa-palette"></i>
+            </span>
+
+            <div>
+              <strong>Creativity</strong>
+              <small>Encouraging young minds</small>
+            </div>
+          </div>
+
+
+          <div class="donate-floating-heart">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SUPPORT MESSAGE -->
+      <section class="donate-message-section reveal">
+
+        <div class="donate-message-icon">
+          <i class="fa-solid fa-hands-holding-circle"></i>
+        </div>
+
+        <div class="donate-message-content">
+
+          <span>BE A PART OF THE CHANGE</span>
+
+          <h2>Small Contributions. Meaningful Impact.</h2>
+
+          <p>
+            Your support helps us work towards free educational assistance
+            for children from underprivileged communities and encourages
+            arts, creativity and community participation.
+          </p>
+
+        </div>
+
+      </section>
+
+
+       <!-- DONATION DASHBOARD -->
+    <section class="donation-card"
+             id="donation-dashboard">
+
+        <div class="donation-heading">
+
+            <div>
+                <span>SUPPORT ADNYAN</span>
+                <h2 id="donation-title">Make a Donation</h2>
+                <p>Your contribution helps us create meaningful change.</p>
+            </div>
+
+            <div class="donation-mark">
+                <i class="fa-solid fa-hands-holding-circle"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+        </div>
+
+        <div id="donationFormView">
+
+            <!-- DONATION AMOUNT -->
+            <div class="donation-field">
+
+                <label>Choose Donation Amount</label>
+
+                <div class="amount-options">
+
+                    <button type="button"
+                            class="amount-btn active"
+                            data-amount="500">₹500</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="1000">₹1,000</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="2500">₹2,500</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="5000">₹5,000</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="10000">₹10,000</button>
+
+                </div>
+
+            </div>
+
+            <!-- CUSTOM AMOUNT -->
+            <div class="donation-field">
+
+                <label for="customAmount">
+                    Or Enter Your Amount
+                </label>
+
+                <div class="custom-amount-box">
+                    <span>₹</span>
+
+                    <input type="number"
+                           id="customAmount"
+                           min="1"
+                           placeholder="Enter amount">
+                </div>
+
+            </div>
+
+            <!-- PURPOSE -->
+            <div class="donation-field">
+
+                <label for="donationPurpose">
+                    Donation Purpose
+                </label>
+
+                <select id="donationPurpose"
+                        class="donation-select">
+
+                    <option>General Donation</option>
+                    <option>Educational Aid</option>
+                    <option>Community Nutrition</option>
+                    <option>Social Awareness</option>
+
+                </select>
+
+            </div>
+
+            <!-- DONOR DETAILS -->
+            <div class="donor-grid">
+
+                <div class="donation-field">
+                    <label for="donorName">Your Name</label>
+
+                    <input type="text"
+                           id="donorName"
+                           class="donation-input"
+                           placeholder="Enter your name">
+                </div>
+
+                <div class="donation-field">
+                    <label for="donorEmail">Email Address</label>
+
+                    <input type="email"
+                           id="donorEmail"
+                           class="donation-input"
+                           placeholder="Enter your email">
+                </div>
+
+                <div class="donation-field donor-phone">
+                    <label for="donorPhone">Mobile Number</label>
+
+                    <input type="tel"
+                           id="donorPhone"
+                           class="donation-input"
+                           maxlength="10"
+                           placeholder="10-digit mobile number">
+                </div>
+
+            </div>
+
+            <!-- DONATION SUMMARY -->
+            <div class="donation-summary">
+
+                <div>
+                    <span>Donation Amount</span>
+                    <strong id="summaryAmount">₹500</strong>
+                </div>
+
+                <div>
+                    <span>Purpose</span>
+                    <strong id="summaryPurpose">General Donation</strong>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="summaryTotal">₹500</strong>
+                </div>
+
+            </div>
+
+            <!-- PAYMENT QR CODE: ALWAYS VISIBLE -->
+            <div class="payment-step" id="paymentStep">
+
+                <div class="payment-step-heading">
+
+                    <span class="payment-kicker">
+                        COMPLETE YOUR CONTRIBUTION
+                    </span>
+
+                    <h3>Scan &amp; Pay</h3>
+
+                    <p>
+                        Scan this QR code using any supported UPI app.
+                    </p>
+
+                </div>
+
+                <div class="payment-amount">
+
+                    <span>Donation Amount</span>
+                    <strong id="paymentAmount">₹500</strong>
+
+                </div>
+
+                <div class="payment-qr-frame">
+
+                    <img src="images/qrcode.jpeg"
+                         alt="ADNYAN Donation QR Code"
+                         id="donationQrImage">
+
+                </div>
+
+                <p class="payment-purpose">
+                    Purpose:
+                    <strong id="paymentPurpose">
+                        General Donation
+                    </strong>
+                </p>
+
+                <p class="payment-donor">
+                    Donor:
+                    <strong id="paymentDonor">—</strong>
+                </p>
+
+                <p class="payment-instruction">
+                    Scan the QR code and complete your donation
+                    using your UPI application.
+                </p>
+
+            </div>
+
+            <!-- PAY NOW BUTTON -->
+            <button type="button"
+                    class="continue-btn"
+                    id="payNowBtn">
+
+                <span>Pay Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <p class="secure-note">
+                <i class="fa-solid fa-lock"></i>
+                Your contribution supports ADNYAN initiatives.
+            </p>
+
+        </div>
+
+    </section>
+
+</section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+      <div class="footer-main">
+
+        <a class="footer-brand" href="index.html">
+
+          <img src="images/logo.png" alt="ADNYAN Logo">
+
+          <span>
+            <strong>ADNYAN</strong>
+            <small>Research &amp; Educational Trust</small>
+          </span>
+
+        </a>
+
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+
+          <a href="index.html">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="ourinitiative.html">Our Initiatives</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="donate.html">Donate Now</a>
+
+        </nav>
+
+
+        <div class="footer-social">
+
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 ADNYAN Research &amp; Educational Trust. All Rights Reserved.
+        </span>
+
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>

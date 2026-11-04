@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Volunteer with ADNYAN Research & Educational Trust and take part in education, food distribution and community activities.">
+  <title>Volunteer | ADNYAN Research &amp; Educational Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="volunteer.css">
+  <script src="volunteer.js" defer></script>
+</head>
+<body>
+
+  <!-- ORIGINAL ADNYAN PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-background"></div>
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <div class="loader-glow"></div>
+        <div class="loader-ring ring-one"></div>
+        <div class="loader-ring ring-two"></div>
+        <img src="images/logo.png" alt="Adnyan Logo" class="loader-logo">
+      </div>
+      <div class="loader-brand">
+        <h1>ADNYAN</h1>
+        <p>Research &amp; Educational Trust</p>
+      </div>
+      <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+      </div>
+      <div class="loader-status" id="loader-text">
+        Preparing something meaningful...
+      </div>
+    </div>
+  </div>
+
+
+  <div id="website">
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Adnyan home">
+      <img src="images/logo.png" alt="Adnyan logo">
+      <span><strong>ADNYAN</strong><small>Research &amp; Educational Trust</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="ourinitiative.html">Our Initiatives</a>
+      <a class="active" href="volunteer.html" aria-current="page">Volunteer</a>
+      <a class="nav-donate" href="donate.html"><i class="fa-solid fa-heart"></i> Donate Now</a>
+    </nav>
+  </header>
+
+  <main class="volunteer-main">
+    <!-- HERO: image-led and intentionally short on copy -->
+    <section class="volunteer-hero" aria-label="Become an ADNYAN volunteer">
+      <div class="volunteer-hero-copy">
+        <span class="volunteer-eyebrow"><i class="fa-solid fa-hands-holding-circle"></i> BE THE DIFFERENCE</span>
+        <h1>GIVE YOUR TIME.<br><span>CREATE AN IMPACT.</span></h1>
+        <p>Small actions. Stronger communities.</p>
+        <a class="volunteer-primary-btn" href="#volunteer-registration">JOIN AS A VOLUNTEER <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="volunteer-hero-image">
+        <img src="images/volunterbanner.png" alt="ADNYAN community activities">
+        <div class="hero-image-stamp"><i class="fa-solid fa-heart"></i><span>TOGETHER<br>WE CAN</span></div>
+      </div>
+      <a class="volunteer-scroll-cue" href="#volunteer-opportunities" aria-label="Explore volunteer activities"><i class="fa-solid fa-arrow-down"></i></a>
+    </section>
+
+    <!-- VISUAL ACTIVITY CHOICES -->
+    <section class="volunteer-opportunities" id="volunteer-opportunities">
+      <div class="volunteer-section-heading">
+        <span>FIND YOUR WAY TO HELP</span>
+        <h2>WHERE CAN YOU HELP?</h2>
+      </div>
+      <div class="volunteer-opportunity-grid">
+        <a class="volunteer-opportunity-card" href="#volunteer-registration" data-interest="Education Support">
+          <img src="images/education.jpeg" alt="Educational support activities">
+          <span class="opportunity-overlay"><span class="opportunity-icon"><i class="fa-solid fa-book-open-reader"></i></span><strong>EDUCATION</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="volunteer-opportunity-card featured-opportunity" href="#volunteer-registration" data-interest="Community Support">
+          <img src="images/foodandcommunity.jpeg" alt="Community food and support activities">
+          <span class="opportunity-overlay"><span class="opportunity-icon"><i class="fa-solid fa-bowl-food"></i></span><strong>FOOD &amp; COMMUNITY</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="volunteer-opportunity-card" href="#volunteer-registration" data-interest="Awareness & Green Initiatives">
+          <img src="images/awarness.jpeg" alt="Community awareness and green initiatives">
+          <span class="opportunity-overlay"><span class="opportunity-icon"><i class="fa-solid fa-seedling"></i></span><strong>AWARENESS &amp; GREEN ACTION</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- THREE ICON STEPS, WITH ONLY SHORT LABELS -->
+    <section class="volunteer-steps-section" aria-label="How volunteering works">
+      <div class="volunteer-section-heading">
+        <span>GET INVOLVED</span>
+        <h2>THREE SIMPLE STEPS</h2>
+      </div>
+      <div class="volunteer-steps">
+        <div class="volunteer-step"><span class="step-number">01</span><span class="step-icon"><i class="fa-solid fa-clipboard-list"></i></span><strong>REGISTER</strong></div>
+        <span class="step-connector"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="volunteer-step"><span class="step-number">02</span><span class="step-icon"><i class="fa-solid fa-handshake"></i></span><strong>CONNECT</strong></div>
+        <span class="step-connector"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="volunteer-step"><span class="step-number">03</span><span class="step-icon"><i class="fa-solid fa-hands-holding-circle"></i></span><strong>CONTRIBUTE</strong></div>
+      </div>
+    </section>
+
+    <!-- A visual registration area, not a second dashboard-style card -->
+    <section class="volunteer-registration" id="volunteer-registration">
+      <div class="registration-intro">
+        <span class="registration-kicker">YOUR TIME MATTERS</span>
+        <h2>LET'S<br><em>DO GOOD.</em></h2>
+        <div class="registration-art" aria-hidden="true">
+          <span class="registration-art-ring"></span>
+          <i class="fa-solid fa-people-group"></i>
+          <span class="art-leaf art-leaf-one"><i class="fa-solid fa-leaf"></i></span>
+          <span class="art-leaf art-leaf-two"><i class="fa-solid fa-heart"></i></span>
+        </div>
+        <p>Join the ADNYAN volunteer community.</p>
+      </div>
+
+      <form class="volunteer-form" id="volunteerForm" novalidate>
+        <div class="form-title-row">
+          <div><span>VOLUNTEER REGISTRATION</span><h3>Tell us about you</h3></div>
+          <i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
+        </div>
+        <div class="volunteer-form-grid">
+          <div class="volunteer-input-group"><label for="volunteerName">Full Name <b>*</b></label><input id="volunteerName" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
+          <div class="volunteer-input-group"><label for="volunteerEmail">Email Address <b>*</b></label><input id="volunteerEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></div>
+          <div class="volunteer-input-group"><label for="volunteerPhone">Mobile Number <b>*</b></label><input id="volunteerPhone" name="phone" type="tel" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel" required></div>
+          <div class="volunteer-input-group"><label for="volunteerArea">I can help with <b>*</b></label><select id="volunteerArea" name="interest" required><option value="">Choose an activity</option><option>Education Support</option><option>Community Support</option><option>Awareness &amp; Green Initiatives</option><option>Events &amp; General Volunteering</option></select></div>
+          <div class="volunteer-input-group availability-group"><label for="volunteerAvailability">Availability</label><select id="volunteerAvailability" name="availability"><option value="">Choose availability</option><option>Weekdays</option><option>Weekends</option><option>Flexible</option></select></div>
+        </div>
+        <button class="volunteer-submit-btn" type="submit">SUBMIT INTEREST <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="volunteer-form-note" id="volunteerFormStatus" role="status" aria-live="polite">* Required fields</p>
+      </form>
+    </section>
+
+    <section class="support-section" aria-label="Volunteer and donate">
+      <div class="volunteer-panel">
+        <div class="leaf-decoration"><i class="fa-solid fa-leaf"></i><i class="fa-solid fa-leaf"></i><i class="fa-solid fa-leaf"></i></div>
+        <div class="support-heart"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <h2>Your time, support and contribution can transform lives.</h2>
+        <div class="support-actions"><a class="btn btn-orange" href="volunteer.html"><i class="fa-solid fa-users"></i> Become a Volunteer</a><a class="btn btn-light-outline" href="#donation-dashboard"><i class="fa-solid fa-heart"></i> Donate Now</a></div>
+      </div>
+
+       <!-- DONATION DASHBOARD -->
+    <section class="donation-card"
+             id="donation-dashboard">
+
+        <div class="donation-heading">
+
+            <div>
+                <span>SUPPORT ADNYAN</span>
+                <h2 id="donation-title">Make a Donation</h2>
+                <p>Your contribution helps us create meaningful change.</p>
+            </div>
+
+            <div class="donation-mark">
+                <i class="fa-solid fa-hands-holding-circle"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+        </div>
+
+        <div id="donationFormView">
+
+            <!-- DONATION AMOUNT -->
+            <div class="donation-field">
+
+                <label>Choose Donation Amount</label>
+
+                <div class="amount-options">
+
+                    <button type="button"
+                            class="amount-btn active"
+                            data-amount="500">₹500</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="1000">₹1,000</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="2500">₹2,500</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="5000">₹5,000</button>
+
+                    <button type="button"
+                            class="amount-btn"
+                            data-amount="10000">₹10,000</button>
+
+                </div>
+
+            </div>
+
+            <!-- CUSTOM AMOUNT -->
+            <div class="donation-field">
+
+                <label for="customAmount">
+                    Or Enter Your Amount
+                </label>
+
+                <div class="custom-amount-box">
+                    <span>₹</span>
+
+                    <input type="number"
+                           id="customAmount"
+                           min="1"
+                           placeholder="Enter amount">
+                </div>
+
+            </div>
+
+            <!-- PURPOSE -->
+            <div class="donation-field">
+
+                <label for="donationPurpose">
+                    Donation Purpose
+                </label>
+
+                <select id="donationPurpose"
+                        class="donation-select">
+
+                    <option>General Donation</option>
+                    <option>Educational Aid</option>
+                    <option>Community Nutrition</option>
+                    <option>Social Awareness</option>
+
+                </select>
+
+            </div>
+
+            <!-- DONOR DETAILS -->
+            <div class="donor-grid">
+
+                <div class="donation-field">
+                    <label for="donorName">Your Name</label>
+
+                    <input type="text"
+                           id="donorName"
+                           class="donation-input"
+                           placeholder="Enter your name">
+                </div>
+
+                <div class="donation-field">
+                    <label for="donorEmail">Email Address</label>
+
+                    <input type="email"
+                           id="donorEmail"
+                           class="donation-input"
+                           placeholder="Enter your email">
+                </div>
+
+                <div class="donation-field donor-phone">
+                    <label for="donorPhone">Mobile Number</label>
+
+                    <input type="tel"
+                           id="donorPhone"
+                           class="donation-input"
+                           maxlength="10"
+                           placeholder="10-digit mobile number">
+                </div>
+
+            </div>
+
+            <!-- DONATION SUMMARY -->
+            <div class="donation-summary">
+
+                <div>
+                    <span>Donation Amount</span>
+                    <strong id="summaryAmount">₹500</strong>
+                </div>
+
+                <div>
+                    <span>Purpose</span>
+                    <strong id="summaryPurpose">General Donation</strong>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="summaryTotal">₹500</strong>
+                </div>
+
+            </div>
+
+            <!-- PAYMENT QR CODE: ALWAYS VISIBLE -->
+            <div class="payment-step" id="paymentStep">
+
+                <div class="payment-step-heading">
+
+                    <span class="payment-kicker">
+                        COMPLETE YOUR CONTRIBUTION
+                    </span>
+
+                    <h3>Scan &amp; Pay</h3>
+
+                    <p>
+                        Scan this QR code using any supported UPI app.
+                    </p>
+
+                </div>
+
+                <div class="payment-amount">
+
+                    <span>Donation Amount</span>
+                    <strong id="paymentAmount">₹500</strong>
+
+                </div>
+
+                <div class="payment-qr-frame">
+
+                    <img src="images/qrcode.jpeg"
+                         alt="ADNYAN Donation QR Code"
+                         id="donationQrImage">
+
+                </div>
+
+                <p class="payment-purpose">
+                    Purpose:
+                    <strong id="paymentPurpose">
+                        General Donation
+                    </strong>
+                </p>
+
+                <p class="payment-donor">
+                    Donor:
+                    <strong id="paymentDonor">—</strong>
+                </p>
+
+                <p class="payment-instruction">
+                    Scan the QR code and complete your donation
+                    using your UPI application.
+                </p>
+
+            </div>
+
+            <!-- PAY NOW BUTTON -->
+            <button type="button"
+                    class="continue-btn"
+                    id="payNowBtn">
+
+                <span>Pay Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <p class="secure-note">
+                <i class="fa-solid fa-lock"></i>
+                Your contribution supports ADNYAN initiatives.
+            </p>
+
+        </div>
+
+    </section>
+
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="footer-brand" href="index.html"><img src="images/logo.png" alt="Adnyan logo"><span><strong>ADNYAN</strong><small>Research &amp; Educational Trust</small></span></a>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="ourinitiative.html">Our Initiatives</a><a href="volunteer.html">Volunteer</a><a href="donate.html">Donate Now</a></nav>
+      <div class="footer-social" aria-label="Social media"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Adnyan Research &amp; Educational Trust. All Rights Reserved.</span><div><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div>
+  </footer>
+  </div>
+</body>
+</html>
