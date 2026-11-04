@@ -1,8 +1,7 @@
 
 /* =========================================================
    ADNYAN OUR INITIATIVES PAGE
-   Shared header, loader, donation dashboard and footer
-   base styles remain in style.css.
+   Shared styles are loaded from style.css.
 ========================================================= */
 
 :root {
@@ -12,7 +11,96 @@
   --initiative-cream: #faf9f6;
 }
 
-/* HERO */
+/* =========================================================
+   RESPONSIVE HEADER — MATCH HOME PAGE
+========================================================= */
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--deep);
+  font-size: 23px;
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+  z-index: 30;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    height: 68px;
+    padding: 0 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .brand {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand strong {
+    font-size: 21px;
+  }
+
+  .brand small {
+    font-size: 9px;
+  }
+
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    padding: 16px 22px 20px;
+    background: #fff;
+    box-shadow: 0 12px 18px #173d2715;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    z-index: 1001;
+  }
+
+  /* JavaScript toggles active */
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar > a {
+    display: block;
+    padding: 12px 4px;
+    font-size: 14px;
+  }
+
+  .navbar > a:not(.nav-donate):after {
+    display: none;
+  }
+
+  .navbar .nav-donate {
+    text-align: center;
+    margin-top: 8px;
+    padding: 12px 18px;
+  }
+}
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .initiative-hero {
   min-height: 190px;
@@ -110,8 +198,9 @@
   border-color: rgba(255,255,255,.22);
 }
 
-
-/* GALLERY */
+/* =========================================================
+   GALLERY
+========================================================= */
 
 .initiative-gallery-section {
   max-width: 1390px;
@@ -144,7 +233,6 @@
   font-size: 13px;
   line-height: 1.55;
 }
-
 
 /* FILTER BUTTONS */
 
@@ -197,7 +285,6 @@
   outline-offset: 3px;
 }
 
-
 /* RESULT COUNT */
 
 .gallery-results {
@@ -207,7 +294,6 @@
   font-size: 11px;
   font-weight: 600;
 }
-
 
 /* PHOTO GRID */
 
@@ -238,7 +324,6 @@
   display: none !important;
 }
 
-
 /* SQUARE IMAGES */
 
 .initiative-photo-wrap {
@@ -262,7 +347,6 @@
 .initiative-photo-card:hover .initiative-photo-wrap img {
   transform: scale(1.05);
 }
-
 
 /* IMAGE FALLBACK */
 
@@ -293,7 +377,6 @@
   font-weight: 800;
 }
 
-
 /* CAPTIONS */
 
 .initiative-photo-card figcaption {
@@ -316,7 +399,6 @@
   font-size: 10px;
   line-height: 1.4;
 }
-
 
 /* EMPTY CATEGORY */
 
@@ -344,7 +426,6 @@
   font-size: 12px;
 }
 
-
 /* GALLERY NOTE */
 
 .initiative-gallery-note {
@@ -362,8 +443,9 @@
   color: var(--initiative-orange);
 }
 
-
-/* VIDEO SECTION */
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
 
 .initiative-video-section {
   background: linear-gradient(110deg, #f6f8f1, #fffaf2);
@@ -430,8 +512,6 @@
   box-shadow: 0 12px 30px rgba(27,58,35,.10);
 }
 
-/* RESPONSIVE YOUTUBE PLAYER */
-
 .initiative-video-frame {
   position: relative;
   width: 100%;
@@ -476,8 +556,9 @@
   color: var(--initiative-green);
 }
 
-
-/* SUPPORT SECTION */
+/* =========================================================
+   SUPPORT AND DONATION
+========================================================= */
 
 .support-section {
   padding: 35px clamp(18px, 5vw, 70px);
@@ -490,15 +571,13 @@
 
 .donation-card {
   max-width: 850px;
+  width: 100%;
   margin: 35px auto 0;
 }
 
 .donation-card [hidden] {
   display: none !important;
 }
-
-
-/* DONATION AMOUNTS */
 
 .amount-options {
   display: flex;
@@ -520,7 +599,6 @@
   width: 100%;
 }
 
-
 /* PAYMENT STEP */
 
 .payment-step {
@@ -530,6 +608,10 @@
   border: 1px solid #e2e8dd;
   border-radius: 15px;
   background: #fbfcf8;
+}
+
+.payment-step[hidden] {
+  display: none !important;
 }
 
 .payment-step-heading h3 {
@@ -586,19 +668,38 @@
   color: var(--initiative-deep);
 }
 
-.back-donation-btn {
-  margin-top: 15px;
-  background: var(--initiative-green);
-  color: #fff;
-  border: 0;
-  cursor: pointer;
+.payment-disclaimer {
+  max-width: 440px;
+  margin: 8px auto 15px;
+  color: #8a5a24;
+  font-size: 10px;
+  line-height: 1.5;
 }
 
+.payment-back-btn {
+  margin-top: 15px;
+  min-height: 39px;
+  padding: 0 17px;
+  border: 1px solid var(--initiative-green);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--initiative-green);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s;
+}
 
-/* TABLET */
+.payment-back-btn:hover {
+  background: #f0f5ee;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
-
   .initiative-video-inner {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -611,14 +712,13 @@
   .initiative-video-copy p {
     margin: 0 auto;
   }
-
 }
 
-
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
-
   .initiative-hero {
     min-height: 205px;
     padding: 30px 21px;
@@ -713,31 +813,23 @@
     font-size: 9px;
   }
 
-}
+  .payment-step {
+    padding: 20px 10px;
+  }
 
+  .payment-qr-frame {
+    width: min(230px, 85%);
+  }
+}
 
 /* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
-
   .initiative-photo-card,
   .initiative-photo-wrap img,
   .initiative-hero-link,
-  .filter-btn {
+  .filter-btn,
+  .payment-back-btn {
     transition: none !important;
   }
-
-}
-
-
-/* KEEP YOUR CURRENT WEBSITE VISIBILITY SETTING */
-
-#website {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-#page-loader {
-  display: none !important;
 }
